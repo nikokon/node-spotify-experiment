@@ -1,0 +1,19 @@
+.track{
+	color:#5533cc;
+	background-color: #cccccc;
+}
+
+.track:hover{
+	background-color: #ffcccc;
+
+}
+
+.center {
+     float: none;
+     margin-left: auto;
+     margin-right: auto;
+}
+
+.login-form {
+  margin-top: 30%;
+}
