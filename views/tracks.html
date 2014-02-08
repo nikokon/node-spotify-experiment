@@ -10,6 +10,12 @@
     <div class="container col-lg-6 col-sm-12 center">
       <h1>{{playlist.name}}</h1>
       <p>pick to play a track</p>
+      <div class="controller pull-right">
+        <span class="glyphicon glyphicon-backward"></span>
+        <span class="glyphicon glyphicon-play"></span>
+        <span class="glyphicon glyphicon-stop stop"></span>
+        <span class="glyphicon glyphicon-forward"></span>
+      </div>
       <table class="table table-hover">
         {{#tracks}}
           <tr><td><div class="track" data-link={{link}}>{{name}}</div></td></tr>

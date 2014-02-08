@@ -57,6 +57,7 @@ app.post('/play', function(req, res){
 app.post('/stop', function(req, res){
       console.log("stopping music");
       spotify.player.stop();
+      res.send("music stopped");
 });
 
 app.post('/login', function(req, res){
