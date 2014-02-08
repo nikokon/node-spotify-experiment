@@ -40,6 +40,9 @@ app.get('/playlists', function(req, res){
     res.render('tracks', {'tracks': tracks, 'playlist': playlist})
   }else{
     playlists = spotify.getPlaylists();
+    for(var i = 0; i < playlists.length; i++){
+      playlists[i]['index'] = i;
+    }
     res.render('playlists', {'playlists': playlists});
   }
 });
@@ -49,6 +52,11 @@ app.post('/play', function(req, res){
       console.log(req.body.track.toString());
       var track = spotify.createFromLink(req.body.track);
       spotify.player.play(track);
+});
+
+app.post('/stop', function(req, res){
+      console.log("stopping music");
+      spotify.player.stop();
 });
 
 app.post('/login', function(req, res){
